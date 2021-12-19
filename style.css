@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width:100%;
+    height: 100vh;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2c3e50;
+}
+.calculadora{
+    width:80%;
+    max-width:400px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+.visor{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.valor{
+    padding: 15px;
+    padding-bottom: 0;
+
+    font-size: 36px;
+    color:rgba(255,255,255,0.8);
+}
+.conta{
+    padding:15px;
+    padding-top: 5px;;
+
+    color:rgba(255,255,255,0.5);
+    font-size: 16px;
+}
+.botoes{
+    display: grid;
+    grid-template-columns: auto 80px;
+}
+.numeros{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 60px;
+}
+.numeros [data-value="0"]{
+    grid-column: span 3;
+}
+.acoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.numeros button{
+    width:100%;
+    height: 100%;
+    border:0;
+    transition: ease-in 0.3s;
+    background:rgba(0,0,0,0.95);
+
+    color:#ffffff;
+    font-size: 1.8rem;
+}
+.numeros button:hover{
+    background:rgba(0,0,0,0.8);
+}
+.acoes button{
+    width: 100%;
+    height: 100%;
+    background: #666666;
+    border:0;
+    transition: ease-in 0.3s;
+
+    color:#ffffff;
+    font-size: 1rem;
+}
+.acoes button:hover{
+    background:#888888;
+}
+.acoes button[data-execute]{
+    background: #f39c12;
+
+    font-size: 1.6rem;
+    color:#ffffff;
+}
